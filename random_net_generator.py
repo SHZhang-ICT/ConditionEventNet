@@ -168,7 +168,6 @@ if __name__ == '__main__':
             parser.print_help()
             sys.exit(0)
 
-        print parsed_args.multinetsize, parsed_args.multitime, parsed_args.conditioneventnum, output_file
         generator = ConditionEventNetGenerator(int(parsed_args.multinetsize), int(parsed_args.multitime), int(parsed_args.conditioneventnum))
         generator.generate_net([], [])
         generator.dump(output_file)
